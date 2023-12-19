@@ -1,0 +1,13 @@
+<div *ngIf="fixturesResponse.length">
+    <section *ngFor="let fixture of fixturesResponse">
+        <img [src]="fixture.teams.home.logo" />
+        <span>{{fixture.teams.home.name}}</span>
+        <span>{{fixture.goals.home}}</span>
+        <span>-</span>
+        <span>{{fixture.goals.away}}</span>
+        <span>{{fixture.teams.away.name}}</span>
+        <img [src]="fixture.teams.away.logo" />
+    </section>
+</div>
+<app-loader *ngIf="!fixturesResponse.length">Loading...</app-loader>
+<button (click)="backToStandings()">BACK</button>

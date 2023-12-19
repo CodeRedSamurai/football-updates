@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "football-updates"
+  "defaultProject": "football-updates",
+  "cli": {
+    "analytics": false
+  }
 }

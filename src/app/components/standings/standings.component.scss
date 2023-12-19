@@ -1,0 +1,19 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: whitesmoke;
+    border-radius: 2em;
+
+    td,
+    th {
+        border: 1px solid #dddddd;
+        border-radius: 1em;
+        text-align: left;
+        padding: 8px;   
+        &:nth-child(3) {
+            cursor: pointer;
+        }    
+    }
+}
+

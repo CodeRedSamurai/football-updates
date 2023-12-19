@@ -1,0 +1,5 @@
+<nav class="country-nav">
+    <span *ngFor="let item of countries" [id]="item.country.toLowerCase()+'Select'" [routerLink]="'standings/'+item.leagueId"
+        [routerLinkActiveOptions]="{exact:
+        true}" routerLinkActive="active">{{item.country}}</span>
+</nav>

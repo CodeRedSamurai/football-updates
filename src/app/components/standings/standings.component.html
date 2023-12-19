@@ -1,0 +1,17 @@
+<table *ngIf="standingsResponse.length">
+    <tr>
+        <th *ngFor="let heading of tableHeadings">{{heading}}</th>
+    </tr>
+    <tr *ngFor="let teamStanding of standingsResponse; index as i">
+        <td>{{teamStanding.rank}}</td>
+        <td><img [src]="teamStanding.team.logo" /></td>
+        <td (click)="getTeamFixtures(teamStanding)">{{teamStanding.team.name}}</td>
+        <td>{{teamStanding.all.played}}</td>
+        <td>{{teamStanding.all.win}}</td>
+        <td>{{teamStanding.all.lose}}</td>
+        <td>{{teamStanding.all.draw}}</td>
+        <td>{{teamStanding.goalsDiff}}</td>
+        <td>{{teamStanding.points}}</td>
+    </tr>
+</table>
+<app-loader *ngIf="!standingsResponse.length">Loading...</app-loader>

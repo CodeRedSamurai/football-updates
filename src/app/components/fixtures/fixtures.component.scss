@@ -1,0 +1,28 @@
+div {
+    background-color: whitesmoke;
+    border-radius: 1em;
+
+    section {
+        display: flex;
+        justify-content: space-between;
+        align-items: left;
+        column-gap: 4em;
+        padding: 2em 2em 0 2em;
+
+        &:nth-last-child(1) {
+            padding-bottom: 2em;
+        }
+    }
+
+}
+
+button {
+    padding: 1em 4em 1em 4em;
+    background-color: skyblue;
+    margin: 2em;
+    border-radius: 1em;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
